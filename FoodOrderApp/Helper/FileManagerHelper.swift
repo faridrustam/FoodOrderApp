@@ -52,7 +52,7 @@ class FileManagerHelper {
         }
     }
     
-    func readBasketData(completion: (([FoodModel]) -> Void)) {
+    func readBasketData(completion: (([FoodModel]?) -> Void)) {
         if let data = try? Data(contentsOf: getFilePath(fileName: .basket)) {
             do {
                 let basket = try JSONDecoder().decode([FoodModel].self, from: data)
@@ -60,6 +60,8 @@ class FileManagerHelper {
             } catch {
                 print(error.localizedDescription)
             }
+        } else {
+                completion(nil)
+            }
         }
     }
-}

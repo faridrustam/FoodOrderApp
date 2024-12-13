@@ -39,8 +39,7 @@ extension MainMenuController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(FoodsMenuCell.self)", for: indexPath) as! FoodsMenuCell
-        cell.hideButton()
-        cell.callElement(image: viewModel.categories[indexPath.row].categoryImage ?? "", name: viewModel.categories[indexPath.row].categoryName ?? "")
+        cell.callElement(image: viewModel.categories[indexPath.row].categoryImage ?? "", name: viewModel.categories[indexPath.row].categoryName ?? "", hideButton: true)
         return cell
     }
     
@@ -48,7 +47,6 @@ extension MainMenuController: UICollectionViewDelegate, UICollectionViewDataSour
         let controller = storyboard?.instantiateViewController(identifier: "\(FoodsMenuController.self)") as! FoodsMenuController
         
         controller.viewModel.foods = viewModel.categories[indexPath.row].foods ?? []
-        controller.viewModel.titleString = viewModel.categories[indexPath.row].categoryName ?? ""
         navigationController?.show(controller, sender: nil)
     }
     

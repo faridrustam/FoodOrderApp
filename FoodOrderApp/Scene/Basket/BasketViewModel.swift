@@ -9,11 +9,11 @@ import Foundation
 
 class BasketViewModel {
     let fileManagerHelper = FileManagerHelper()
-    var selectedFoods = [FoodModel]()
+    var basketFoods = [FoodModel]()
     
     func readData() {
         fileManagerHelper.readBasketData { readBasket in
-            self.selectedFoods = readBasket
+            self.basketFoods = readBasket ?? []
         }
     }
 }

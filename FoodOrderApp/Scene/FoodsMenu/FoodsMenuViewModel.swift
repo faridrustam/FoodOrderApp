@@ -9,8 +9,8 @@ import Foundation
 
 class FoodsMenuViewModel {
     
+    var category: CategoryModel?
     var foods = [FoodModel]()
-    var titleString = ""
     var basketFoods = [FoodModel]()
     let fileManagerHelper = FileManagerHelper()
     
@@ -24,8 +24,12 @@ class FoodsMenuViewModel {
 //        }
     
     func saveItemToBasket(index: Int) {
-        basketFoods.append(foods[index])
-        fileManagerHelper.writeBasketData(basket: basketFoods)
+        fileManagerHelper.readBasketData { basketItems in
+            basketFoods = basketItems ?? []
+            basketFoods.append(foods[index])
+            fileManagerHelper.writeBasketData(basket: basketFoods)
+        }
+        
     }
     
     func getFilePath(fileName: FileName) -> URL  {

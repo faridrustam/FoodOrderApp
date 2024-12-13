@@ -12,6 +12,7 @@ class BasketCell: UITableViewCell {
     @IBOutlet weak var basketImageView: UIImageView!
     @IBOutlet weak var foodPriceLabel: UILabel!
     @IBOutlet weak var foodNameLabel: UILabel!
+    @IBOutlet weak var sameFoodCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,10 +22,11 @@ class BasketCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func callElement(foodImage: String, foodName: String, foodPrice: String) {
+    func callElement(foodImage: String, foodName: String, foodPrice: String, count: String = "1") {
         foodNameLabel.text = foodName
         basketImageView.image = UIImage(named: foodImage)
-        foodPriceLabel.text = foodPrice
+        foodPriceLabel.text = "\(foodPrice)$"
+        sameFoodCountLabel.text = "count: \(count)"
     }
     
 }

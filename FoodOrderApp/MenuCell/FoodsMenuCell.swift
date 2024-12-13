@@ -20,12 +20,9 @@ class FoodsMenuCell: UICollectionViewCell {
         buttonAction?()
     }
     
-    func callElement(image: String, name: String) {
+    func callElement(image: String, name: String, hideButton: Bool = false) {
+        addButton.isHidden = hideButton
         categoryNameLabel.text = name
         categoryImageView.image = UIImage(named: image)
-    }
-    
-    func hideButton() {
-        addButton.isHidden = true
     }
 }

@@ -19,7 +19,7 @@ class FoodsMenuController: UIViewController {
     }
     
     private func configureUI() {
-        title = viewModel.titleString
+        title = viewModel.category?.categoryName ?? ""
         foodsMenuCollectionView.delegate = self
         foodsMenuCollectionView.dataSource = self
         foodsMenuCollectionView.register(UINib(nibName: "\(FoodsMenuCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(FoodsMenuCell.self)")
