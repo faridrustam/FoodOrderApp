@@ -1,0 +1,158 @@
+[
+            {
+                    "categoryName": "American",
+                    "categoryImage": "americanFood",
+                    "foods": [
+                        {
+                        "foodName": "Hamburger",
+                        "foodPrice": "4",
+                        "foodImage": "hamburgerImage"
+                        },
+                        {
+                        "foodName": "Hot dogs",
+                        "foodPrice": "5",
+                        "foodImage": "hotdogImage"
+                        },
+                        {
+                        "foodName": "Fried chicken",
+                        "foodPrice": "4",
+                        "foodImage": "friedChickenImage"
+                        },
+                        {
+                        "foodName": "Macaroni and cheese",
+                        "foodPrice": "8",
+                        "foodImage": "macaroniImage"
+                        }
+                    ]
+            },
+            {
+                    "categoryName": "Italian",
+                    "categoryImage": "italianFood",
+                    "foods": [
+                        {
+                        "foodName": "Margarita Pizza",
+                        "foodPrice": "12",
+                        "foodImage": "MargaritaPizzaImage"
+                        },
+                        {
+                        "foodName": "Fettuccine Alfredo",
+                        "foodPrice": "7",
+                        "foodImage": "fettuccineAlfredoImage"
+                        },
+                        {
+                        "foodName": "Lasagna",
+                        "foodPrice": "10",
+                        "foodImage": "lasagnaImage"
+                        },
+                        {
+                        "foodName": "Spaghetti Bolognese",
+                        "foodPrice": "8",
+                        "foodImage": "SpaghettiImage"
+                        }
+                    ]
+            },
+            {
+                    "categoryName": "Traditional",
+                    "categoryImage": "traditionalFood",
+                    "foods": [
+                        {
+                        "foodName": "Dolma",
+                        "foodPrice": "8",
+                        "foodImage": "dolmaImage"
+                        },
+                        {
+                        "foodName": "Plov",
+                        "foodPrice": "15",
+                        "foodImage": "plovImage"
+                        },
+                        {
+                        "foodName": "Kabab",
+                        "foodPrice": "6",
+                        "foodImage": "kababImage"
+                        },
+                        {
+                        "foodName": "Piti",
+                        "foodPrice": "14",
+                        "foodImage": "pitiImage"
+                        }
+                    ]
+            },
+            {
+                    "categoryName": "Asian",
+                    "categoryImage": "asianFood",
+                    "foods": [
+                        {
+                        "foodName": "California Sushi",
+                        "foodPrice": "12",
+                        "foodImage": "sushiImage"
+                        },
+                        {
+                        "foodName": "Noodle with chicken",
+                        "foodPrice": "5",
+                        "foodImage": "noodleImage"
+                        },
+                        {
+                        "foodName": "Tempura",
+                        "foodPrice": "10",
+                        "foodImage": "tempuraImage"
+                        },
+                        {
+                        "foodName": "Sashimi",
+                        "foodPrice": "15",
+                        "foodImage": "sashimiImage"
+                        }
+                    ]
+            },
+            {
+                    "categoryName": "Dessert",
+                    "categoryImage": "dessertFood",
+                    "foods": [
+                        {
+                        "foodName": "Apple Pie",
+                        "foodPrice": "3",
+                        "foodImage": "applePieImage"
+                        },
+                        {
+                        "foodName": "Cheesecake",
+                        "foodPrice": "6",
+                        "foodImage": "cheeseCakeImage"
+                        },
+                        {
+                        "foodName": "Pudding",
+                        "foodPrice": "5",
+                        "foodImage": "puddingImage"
+                        },
+                        {
+                        "foodName": "Baklava",
+                        "foodPrice": "10",
+                        "foodImage": "baklavaImage"
+                        }
+                    ]
+            },
+            {
+                    "categoryName": "Drinks",
+                    "categoryImage": "drinksImage",
+                    "foods": [
+                        {
+                        "foodName": "Coca-Cola",
+                        "foodPrice": "2",
+                        "foodImage": "colaImage"
+                        },
+                        {
+                        "foodName": "Ice Tea",
+                        "foodPrice": "3",
+                        "foodImage": "iceTeaImage"
+                        },
+                        {
+                        "foodName": "Water",
+                        "foodPrice": "1",
+                        "foodImage": "waterImage"
+                        },
+                        {
+                        "foodName": "Limonade",
+                        "foodPrice": "3",
+                        "foodImage": "limonadeImage"
+                        }
+                    ]
+            }
+]
