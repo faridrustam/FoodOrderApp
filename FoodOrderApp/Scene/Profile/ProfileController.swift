@@ -11,6 +11,8 @@ import Lottie
 class ProfileController: UIViewController {
     
     let userDefaultsManager = UserDefaultsManager()
+    let fileManagerHelper = FileManagerHelper()
+    var users = [UserModel]()
     
     @IBOutlet weak var profileAnimationView: LottieAnimationView!
     @IBOutlet weak var fullnameLabel: UILabel!
@@ -20,15 +22,25 @@ class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Profile"
-        profileAnimationView.play()
-        profileAnimationView.loopMode = .loop
+        configureUI()
         
-        if let fullname = userDefaultsManager.getValue(key: .fullname), let email = userDefaultsManager.getValue(key: .email), let birthdate = userDefaultsManager.getValue(key: .birthdate) {
-            fullnameLabel.text = "Fullname: \(fullname)"
-            emailLabel.text = "Email: \(email)"
-            birthdateLabel.text = "Birthdate: \(birthdate)"
-        }
     }
-
+        func configureUI() {
+            title = "Profile"
+            profileAnimationView.play()
+            profileAnimationView.loopMode = .loop
+            fileManagerHelper.readData { usersData in
+                self.users = usersData
+            }
+            
+            let user = users.first{ $0.email == userDefaultsManager.getValue(key: .email) }
+            
+            if let fullname = user?.fullname, let email = user?.email, let birthdate = user?.birthdate {
+                if users.contains(where: {$0.email == userDefaultsManager.getValue(key: .email)} ) {
+                    fullnameLabel.text = "Fullname: \(fullname)"
+                    emailLabel.text = "Email: \(email)"
+                    birthdateLabel.text = "Birthdate: \(birthdate)"
+                }
+            }
+    }
 }

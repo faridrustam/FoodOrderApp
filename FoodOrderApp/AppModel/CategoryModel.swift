@@ -15,6 +15,6 @@ struct CategoryModel: Codable {
 
 struct FoodModel: Codable {
     let foodName: String?
-    let foodPrice: String?
+    let foodPrice: Int?
     let foodImage: String?
 }

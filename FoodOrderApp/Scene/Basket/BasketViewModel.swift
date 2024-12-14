@@ -10,6 +10,7 @@ import Foundation
 class BasketViewModel {
     let fileManagerHelper = FileManagerHelper()
     var basketFoods = [FoodModel]()
+    var totalPrice: Int = 0
     
     func readData() {
         fileManagerHelper.readBasketData { readBasket in

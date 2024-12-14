@@ -35,9 +35,7 @@ class RegisterController: UIViewController {
         if let fullname = fullnameTextField.text, !fullname.isEmpty, let email = emailTextField.text, !email.isEmpty, let birthdate = birthdateTextField.text, !birthdate.isEmpty, let password = passwordTextField.text, !password.isEmpty {
             
             let user: UserModel = (.init(fullname: fullname, email: email, birthdate: birthdate, password: password))
-            userDefaultsManager.setValue(value: fullname, key: .fullname)
             userDefaultsManager.setValue(value: email, key: .email)
-            userDefaultsManager.setValue(value: birthdate, key: .birthdate)
             users.append(user)
             registerCallBack?(user)
             fileManagerHelper.writeData(user: users)

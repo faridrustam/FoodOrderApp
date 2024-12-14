@@ -36,8 +36,8 @@ extension FoodsMenuController: UICollectionViewDelegate, UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(FoodsMenuCell.self)", for: indexPath) as! FoodsMenuCell
         cell.callElement(image: viewModel.foods[indexPath.row].foodImage ?? "", name: viewModel.foods[indexPath.row].foodName ?? "")
         cell.buttonAction = {
-            self.viewModel.saveItemToBasket(index: indexPath.item)
-        }
+                self.viewModel.saveItemToBasket(index: indexPath.item)
+            }
         
         return cell
     }

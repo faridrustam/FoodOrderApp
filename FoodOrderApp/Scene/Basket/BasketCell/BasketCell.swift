@@ -22,7 +22,7 @@ class BasketCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func callElement(foodImage: String, foodName: String, foodPrice: String, count: String = "1") {
+    func callElement(foodImage: String, foodName: String, foodPrice: Int, count: String = "1") {
         foodNameLabel.text = foodName
         basketImageView.image = UIImage(named: foodImage)
         foodPriceLabel.text = "\(foodPrice)$"

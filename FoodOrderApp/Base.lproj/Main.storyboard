@@ -206,6 +206,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dpg-vl-qYy">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="sA8-m6-hTj">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIU-5M-lji">
+                                            <rect key="frame" x="2" y="11.999999999999998" width="389" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="PIU-5M-lji" firstAttribute="leading" secondItem="sA8-m6-hTj" secondAttribute="leading" constant="2" id="2Ou-FK-Xji"/>
+                                        <constraint firstItem="PIU-5M-lji" firstAttribute="top" secondItem="sA8-m6-hTj" secondAttribute="top" constant="12" id="7IV-Nm-DKg"/>
+                                        <constraint firstAttribute="trailing" secondItem="PIU-5M-lji" secondAttribute="trailing" constant="2" id="IAJ-jU-Iwr"/>
+                                        <constraint firstItem="PIU-5M-lji" firstAttribute="centerX" secondItem="sA8-m6-hTj" secondAttribute="centerX" id="eXb-zg-Uox"/>
+                                    </constraints>
+                                </view>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QSr-HL-Wj7"/>
@@ -219,6 +238,8 @@
                     </view>
                     <connections>
                         <outlet property="basketTableView" destination="Dpg-vl-qYy" id="5lm-SF-QNN"/>
+                        <outlet property="footerView" destination="sA8-m6-hTj" id="xga-fN-sph"/>
+                        <outlet property="totalPriceLabel" destination="PIU-5M-lji" id="2sl-n2-pV8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yiI-AI-Qhi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
