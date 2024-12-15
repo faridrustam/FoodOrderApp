@@ -17,4 +17,5 @@ struct FoodModel: Codable {
     let foodName: String?
     let foodPrice: Int?
     let foodImage: String?
+    var foodCount: Int?
 }

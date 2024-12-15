@@ -40,7 +40,7 @@ class BasketController: UIViewController {
     }
     
     func calculateTotalPrice() {
-            viewModel.totalPrice = viewModel.basketFoods.reduce(0) { $0 + ($1.foodPrice ?? 0) }
+            viewModel.totalPrice = viewModel.basketFoods.reduce(0) { $0 + ($1.foodPrice ?? 0) * ($1.foodCount ?? 1) }
             updatePrice()
     }
 }
@@ -54,7 +54,7 @@ extension BasketController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: indentifer, for: indexPath) as! BasketCell
         let data = viewModel.basketFoods[indexPath.row]
-        cell.callElement(foodImage: data.foodImage ?? "", foodName: data.foodName ?? "", foodPrice: data.foodPrice ?? 0)
+        cell.callElement(foodImage: data.foodImage ?? "", foodName: data.foodName ?? "", foodPrice: data.foodPrice ?? 0, count: data.foodCount ?? 1)
         
         return cell
     }
@@ -62,11 +62,21 @@ extension BasketController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let deletedItemPrice = viewModel.basketFoods[indexPath.row].foodPrice ?? 0
-            viewModel.totalPrice -= deletedItemPrice
-            updatePrice()
-            viewModel.basketFoods.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            viewModel.fileManagerHelper.writeBasketData(basket: viewModel.basketFoods)
+            let quantity = viewModel.basketFoods[indexPath.row].foodCount ?? 1
+            viewModel.fileManagerHelper.readBasketData { deteleData in
+                self.viewModel.basketFoods = deteleData ?? []
+                if quantity > 1 {
+                    viewModel.basketFoods[indexPath.row].foodCount = quantity - 1
+                    viewModel.totalPrice -= deletedItemPrice
+                } else {
+                    viewModel.totalPrice -= deletedItemPrice
+                    viewModel.basketFoods.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+                updatePrice()
+                viewModel.fileManagerHelper.writeBasketData(basket: viewModel.basketFoods)
+            }
+            
         }
     }
 }

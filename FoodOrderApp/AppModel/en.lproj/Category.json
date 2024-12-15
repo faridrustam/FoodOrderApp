@@ -6,22 +6,26 @@
                         {
                         "foodName": "Hamburger",
                         "foodPrice": 4,
-                        "foodImage": "hamburgerImage"
+                        "foodImage": "hamburgerImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Hot dogs",
                         "foodPrice": 5,
-                        "foodImage": "hotdogImage"
+                        "foodImage": "hotdogImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Fried chicken",
                         "foodPrice": 4,
-                        "foodImage": "friedChickenImage"
+                        "foodImage": "friedChickenImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Macaroni and cheese",
                         "foodPrice": 8,
-                        "foodImage": "macaroniImage"
+                        "foodImage": "macaroniImage",
+                        "foodCount": 1
                         }
                     ]
             },
@@ -32,22 +36,26 @@
                         {
                         "foodName": "Margarita Pizza",
                         "foodPrice": 12,
-                        "foodImage": "MargaritaPizzaImage"
+                        "foodImage": "MargaritaPizzaImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Fettuccine Alfredo",
                         "foodPrice": 7,
-                        "foodImage": "fettuccineAlfredoImage"
+                        "foodImage": "fettuccineAlfredoImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Lasagna",
                         "foodPrice": 10,
-                        "foodImage": "lasagnaImage"
+                        "foodImage": "lasagnaImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Spaghetti Bolognese",
                         "foodPrice": 8,
-                        "foodImage": "SpaghettiImage"
+                        "foodImage": "SpaghettiImage",
+                        "foodCount": 1
                         }
                     ]
             },
@@ -58,22 +66,26 @@
                         {
                         "foodName": "Dolma",
                         "foodPrice": 8,
-                        "foodImage": "dolmaImage"
+                        "foodImage": "dolmaImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Plov",
                         "foodPrice": 15,
-                        "foodImage": "plovImage"
+                        "foodImage": "plovImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Kabab",
                         "foodPrice": 6,
-                        "foodImage": "kababImage"
+                        "foodImage": "kababImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Piti",
                         "foodPrice": 14,
-                        "foodImage": "pitiImage"
+                        "foodImage": "pitiImage",
+                        "foodCount": 1
                         }
                     ]
             },
@@ -84,22 +96,26 @@
                         {
                         "foodName": "California Sushi",
                         "foodPrice": 12,
-                        "foodImage": "sushiImage"
+                        "foodImage": "sushiImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Noodle with chicken",
                         "foodPrice": 5,
-                        "foodImage": "noodleImage"
+                        "foodImage": "noodleImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Tempura",
                         "foodPrice": 10,
-                        "foodImage": "tempuraImage"
+                        "foodImage": "tempuraImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Sashimi",
                         "foodPrice": 15,
-                        "foodImage": "sashimiImage"
+                        "foodImage": "sashimiImage",
+                        "foodCount": 1
                         }
                     ]
             },
@@ -110,22 +126,26 @@
                         {
                         "foodName": "Apple Pie",
                         "foodPrice": 3,
-                        "foodImage": "applePieImage"
+                        "foodImage": "applePieImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Cheesecake",
                         "foodPrice": 6,
-                        "foodImage": "cheeseCakeImage"
+                        "foodImage": "cheeseCakeImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Pudding",
                         "foodPrice": 5,
-                        "foodImage": "puddingImage"
+                        "foodImage": "puddingImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Baklava",
                         "foodPrice": 10,
-                        "foodImage": "baklavaImage"
+                        "foodImage": "baklavaImage",
+                        "foodCount": 1
                         }
                     ]
             },
@@ -136,22 +156,26 @@
                         {
                         "foodName": "Coca-Cola",
                         "foodPrice": 2,
-                        "foodImage": "colaImage"
+                        "foodImage": "colaImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Ice Tea",
                         "foodPrice": 3,
-                        "foodImage": "iceTeaImage"
+                        "foodImage": "iceTeaImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Water",
                         "foodPrice": 1,
-                        "foodImage": "waterImage"
+                        "foodImage": "waterImage",
+                        "foodCount": 1
                         },
                         {
                         "foodName": "Limonade",
                         "foodPrice": 3,
-                        "foodImage": "limonadeImage"
+                        "foodImage": "limonadeImage",
+                        "foodCount": 1
                         }
                     ]
             }
