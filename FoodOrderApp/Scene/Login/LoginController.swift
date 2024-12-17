@@ -55,7 +55,7 @@ class LoginController: UIViewController {
     
     @IBAction func registerTapped(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "\(RegisterController.self)") as! RegisterController
-        controller.registerCallBack = { user in
+        controller.viewModel.registerCallBack = { user in
             self.emailTextField.text = user.email
             self.passwordTextField.text = user.password
         }
