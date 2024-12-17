@@ -9,10 +9,10 @@ import UIKit
 
 class BasketCell: UITableViewCell {
 
-    @IBOutlet weak var basketImageView: UIImageView!
-    @IBOutlet weak var foodPriceLabel: UILabel!
-    @IBOutlet weak var foodNameLabel: UILabel!
-    @IBOutlet weak var sameFoodCountLabel: UILabel!
+    @IBOutlet private weak var basketImageView: UIImageView!
+    @IBOutlet private weak var foodPriceLabel: UILabel!
+    @IBOutlet private weak var foodNameLabel: UILabel!
+    @IBOutlet private weak var sameFoodCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,9 +9,7 @@ import Foundation
 
 enum UserDefaultsKeys: String, CaseIterable {
     case loginCheck = "isLoggedIn"
-    case fullname = "fullname"
     case email = "email"
-    case birthdate = "birthdate"
 }
 
 class UserDefaultsManager {

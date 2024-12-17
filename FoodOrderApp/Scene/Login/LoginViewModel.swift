@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class LoginViewModel {
     
@@ -21,8 +22,6 @@ class LoginViewModel {
             self.users = usersData
         }
     }
-    
-    
     
     func checkData(email: String, password: String) {
         if users.contains(where: { $0.email == email && $0.password == password }) {

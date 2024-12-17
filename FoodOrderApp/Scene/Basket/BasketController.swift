@@ -63,10 +63,10 @@ extension BasketController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             let deletedItemPrice = viewModel.basketFoods[indexPath.row].foodPrice ?? 0
             let quantity = viewModel.basketFoods[indexPath.row].foodCount ?? 1
-            viewModel.fileManagerHelper.readBasketData { deteleData in
-                self.viewModel.basketFoods = deteleData ?? []
+            
                 if quantity > 1 {
                     viewModel.basketFoods[indexPath.row].foodCount = quantity - 1
+                    print(viewModel.basketFoods)
                     viewModel.totalPrice -= deletedItemPrice
                 } else {
                     viewModel.totalPrice -= deletedItemPrice
@@ -75,8 +75,7 @@ extension BasketController: UITableViewDelegate, UITableViewDataSource {
                 }
                 updatePrice()
                 viewModel.fileManagerHelper.writeBasketData(basket: viewModel.basketFoods)
+                tableView.reloadData()
             }
-            
         }
-    }
 }

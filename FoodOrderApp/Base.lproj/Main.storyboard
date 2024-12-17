@@ -221,7 +221,6 @@
                                     <constraints>
                                         <constraint firstItem="PIU-5M-lji" firstAttribute="leading" secondItem="sA8-m6-hTj" secondAttribute="leading" constant="2" id="2Ou-FK-Xji"/>
                                         <constraint firstItem="PIU-5M-lji" firstAttribute="top" secondItem="sA8-m6-hTj" secondAttribute="top" constant="12" id="7IV-Nm-DKg"/>
-                                        <constraint firstAttribute="trailing" secondItem="PIU-5M-lji" secondAttribute="trailing" constant="2" id="IAJ-jU-Iwr"/>
                                         <constraint firstItem="PIU-5M-lji" firstAttribute="centerX" secondItem="sA8-m6-hTj" secondAttribute="centerX" id="eXb-zg-Uox"/>
                                     </constraints>
                                 </view>

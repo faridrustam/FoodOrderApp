@@ -10,10 +10,7 @@ import Lottie
 
 class RegisterController: UIViewController {
     
-    var users = [UserModel]()
-    let userDefaultsManager = UserDefaultsManager()
-    let fileManagerHelper = FileManagerHelper()
-    var registerCallBack: ((UserModel) -> Void)?
+    let viewModel = RegisterViewModel()
     
     @IBOutlet private weak var registerAnimationView: LottieAnimationView!
     @IBOutlet private weak var fullnameTextField: UITextField!
@@ -23,6 +20,10 @@ class RegisterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
+    }
+    
+    func configureUI() {
         title = "Register"
         emailTextField.keyboardType = .emailAddress
         birthdateTextField.keyboardType = .numberPad
@@ -35,15 +36,14 @@ class RegisterController: UIViewController {
         if let fullname = fullnameTextField.text, !fullname.isEmpty, let email = emailTextField.text, !email.isEmpty, let birthdate = birthdateTextField.text, !birthdate.isEmpty, let password = passwordTextField.text, !password.isEmpty {
             
             let user: UserModel = (.init(fullname: fullname, email: email, birthdate: birthdate, password: password))
-            userDefaultsManager.setValue(value: email, key: .email)
-            users.append(user)
-            registerCallBack?(user)
-            fileManagerHelper.writeData(user: users)
+            viewModel.userDefaultsManager.setValue(value: email, key: .email)
+            viewModel.users.append(user)
+            viewModel.registerCallBack?(user)
+            viewModel.fileManagerHelper.writeData(user: viewModel.users)
             showAlert(title: "Success", message: "You have registered successfully")
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
                 self.navigationController?.popViewController(animated: true)
             }
-            
         }
     }
 }
