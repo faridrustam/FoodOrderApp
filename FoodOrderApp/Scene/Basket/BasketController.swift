@@ -54,7 +54,11 @@ extension BasketController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: indentifer, for: indexPath) as! BasketCell
         let data = viewModel.basketFoods[indexPath.row]
-        cell.callElement(foodImage: data.foodImage ?? "", foodName: data.foodName ?? "", foodPrice: data.foodPrice ?? 0, count: data.foodCount ?? 1)
+        let price = (data.foodPrice ?? 0) * (data.foodCount ?? 1)
+        cell.callElement(foodImage: data.foodImage ?? "",
+                         foodName: data.foodName ?? "",
+                         foodPrice: price,
+                         count: data.foodCount ?? 1)
         
         return cell
     }

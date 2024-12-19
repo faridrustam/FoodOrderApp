@@ -21,6 +21,10 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xim-Yy-NlQ">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                     </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRc-Rg-J7c">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-UJ-cIa">
                         <rect key="frame" x="8" y="106" width="134" height="30"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -48,8 +52,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="hRc-Rg-J7c" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7kq-W4-Aa7"/>
                 <constraint firstItem="xim-Yy-NlQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AyZ-NR-Ym4"/>
+                <constraint firstAttribute="trailing" secondItem="hRc-Rg-J7c" secondAttribute="trailing" id="NKK-rY-aic"/>
+                <constraint firstAttribute="bottom" secondItem="hRc-Rg-J7c" secondAttribute="bottom" id="O0C-wA-3BT"/>
                 <constraint firstAttribute="bottom" secondItem="s0d-UJ-cIa" secondAttribute="bottom" constant="14" id="R8r-Jp-l3c"/>
+                <constraint firstItem="hRc-Rg-J7c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cas-uc-lrl"/>
                 <constraint firstItem="xim-Yy-NlQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dap-r1-Jn4"/>
                 <constraint firstAttribute="bottom" secondItem="xim-Yy-NlQ" secondAttribute="bottom" id="eVo-fh-lVJ"/>
                 <constraint firstAttribute="trailing" secondItem="s0d-UJ-cIa" secondAttribute="trailing" constant="8" id="fVd-dY-7Cd"/>
