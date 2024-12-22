@@ -13,6 +13,7 @@ class FoodsMenuViewModel {
     var foods = [FoodModel]()
     var basketFoods = [FoodModel]()
     let fileManagerHelper = FileManagerHelper()
+    var titleString = ""
     
     func addFoodToBasket(index: Int) {
         fileManagerHelper.readBasketData { basketItems in

@@ -46,6 +46,8 @@ extension MainMenuController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = storyboard?.instantiateViewController(identifier: "\(FoodsMenuController.self)") as! FoodsMenuController
         
+        controller.viewModel.titleString = viewModel.categories[indexPath.row].categoryName ?? ""
+        
         controller.viewModel.foods = viewModel.categories[indexPath.row].foods ?? []
         navigationController?.show(controller, sender: nil)
     }
